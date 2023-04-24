@@ -1,9 +1,13 @@
 using System;
+using System.Collections.Generic;
 
-class Program
+namespace Learning02
 {
-    static void Main(string[] args)
+        class Program
     {
-        Console.WriteLine("Hello Learning02 World!");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello Learning02 World!");
+        }
     }
 }
