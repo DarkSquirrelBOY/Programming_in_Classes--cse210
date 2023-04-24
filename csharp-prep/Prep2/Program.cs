@@ -4,7 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        // this is prep 2
-        Console.WriteLine("Hello Prep2 World!");
+        Console.Write("What is your current grade in this class? ");
+        string grade = Console.ReadLine();
+        int number = int.Parse(grade);
+
+        if (number > 90)
+        {
+            Console.WriteLine("A");
+        }
     }
 }
