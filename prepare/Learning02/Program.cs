@@ -11,8 +11,11 @@ namespace Learning02
             List<int> myList = new List<int>();
             myList.Add(121);
             myList.Add(2021);
-            myList.Remove(0);
-            
+            myList.Remove(121);
+            Console.WriteLine("");
+            //Console.WriteLine($"{myList}");
+
+
         }
     }
 }
