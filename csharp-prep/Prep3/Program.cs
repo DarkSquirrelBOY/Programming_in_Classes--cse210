@@ -42,7 +42,7 @@ namespace magicnumber
                 string stringguess = Console.ReadLine();
                 guess = int.Parse(stringguess);
                 
-                //Counting the number of guesses
+                //❌❌Counting the number of guesses❌❌
                 int numberofguesses = 0;
                 numberofguesses = numberofguesses + 1;
 
