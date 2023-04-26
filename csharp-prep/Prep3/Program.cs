@@ -43,6 +43,7 @@ namespace magicnumber
                 guess = int.Parse(stringguess);
                 
                 //❌❌Counting the number of guesses❌❌
+                //not working
                 int numberofguesses = 0;
                 numberofguesses = numberofguesses + 1;
 
