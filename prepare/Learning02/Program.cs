@@ -1,21 +1,47 @@
 using System;
 using System.Collections.Generic;
 
-namespace Learning02
+namespace abstractionlearning
 {
-        class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Learning02 World!");
-            List<int> myList = new List<int>();
-            myList.Add(121);
-            myList.Add(2021);
-            myList.Remove(121);
+            //Spacing
             Console.WriteLine("");
-            //Console.WriteLine($"{myList}");
+            
+
+            //First Job info
+            Job job1 = new Job();
+            //--//
+            job1._company = "Edwards Finishing";
+            job1._jobTitle = "Carpenter";
+            job1._startYear = 2022;
+            job1._endYear = 2023;
+
+            //Second Job info
+            Job job2 = new Job();
+            //--//
+            job2._company = "Victory";
+            job2._jobTitle = "Furniture home delivery contractors";
+            job2._startYear = 2021;
+            job2._endYear = 2021;
 
 
+            Resume myResume = new Resume();
+            myResume._name = "Caden S. Davis";
+            myResume._jobs.Add(job1);
+            myResume._jobs.Add(job2);
+            
+            //Resume Display
+            myResume.DisplayResume();
+
+
+
+
+            //Spacing
+            Console.WriteLine("");
         }
     }
+
 }
