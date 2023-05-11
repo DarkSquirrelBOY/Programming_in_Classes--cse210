@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace journal
 {
@@ -51,6 +52,7 @@ namespace journal
                 //Spacing
                 Console.WriteLine("");
 
+                //"Menu"
                 Console.WriteLine("Please select one of the following choices");
                 Console.WriteLine("1. Write");
                 Console.WriteLine("2. Display");
@@ -67,34 +69,40 @@ namespace journal
                 //Spacing
                 Console.WriteLine("");
 
-                if (menu_choice == "1")
+                if (menu_choice == "1") //Write
                 {
+                    //Choosing Random Prompt
                     int index = random.Next(prompts.Count);
                     System.Console.WriteLine(prompts[index]);
 
+                    //Taking Entry
                     Console.WriteLine("");
                     Console.Write(">> ");
                     string entry1 = Console.ReadLine();
 
                 }
 
-                else if (menu_choice == "2")
+                else if (menu_choice == "2") //Display
                 {
-                    Console.WriteLine($"{entry1}")
+                    // Console.WriteLine($"{entry1}");
                     
                 }
 
-                else if (menu_choice == "3")
+                else if (menu_choice == "3") //Load
                 {
-                    
+                    //open filename and iterate all prompts in the file
+
+
                 }
 
-                else if (menu_choice == "4")
+                else if (menu_choice == "4") //Save
                 {
-                    
+                    //make filename then put entry or all entries in it
+
+
                 }
 
-                else if (menu_choice == "5")
+                else if (menu_choice == "5") //Exit
                 {
                     Console.Write("Have a great day!");
                     closeProgram = "end";
