@@ -4,6 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning04 World!");
+        Dog dog = new Dog();
+        dog.Speak();
+        // dog.Move();
+
+        Bird bird = new Bird();
+        bird.Speak();
+        // bird.Move();
     }
 }
