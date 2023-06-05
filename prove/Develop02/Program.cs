@@ -71,6 +71,8 @@ namespace journal
 
                 if (menu_choice == "1") //Write
                 {
+                    Entry entry = new Entry();
+                    
                     //Choosing Random Prompt
                     int index = random.Next(prompts.Count);
                     System.Console.WriteLine(prompts[index]);
