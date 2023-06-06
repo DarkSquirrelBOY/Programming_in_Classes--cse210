@@ -56,9 +56,8 @@ namespace journal
                 Console.WriteLine("Please select one of the following choices");
                 Console.WriteLine("1. Write");
                 Console.WriteLine("2. Display");
-                Console.WriteLine("3. Load");
-                Console.WriteLine("4. Save");
-                Console.WriteLine("5. Quit");  
+                Console.WriteLine("3. Save");
+                Console.WriteLine("4. Quit");  
                 //Spacing
                 Console.WriteLine("");
 
@@ -71,40 +70,43 @@ namespace journal
 
                 if (menu_choice == "1") //Write
                 {
-                    Entry entry = new Entry();
+                    Entry input = new Entry();
+                    
+                    input.date = DateTime.Now.ToString("dd/MM/yyyy");
                     
                     //Choosing Random Prompt
                     int index = random.Next(prompts.Count);
+                    input.prompt = prompts[index];
                     System.Console.WriteLine(prompts[index]);
 
                     //Taking Entry
                     Console.WriteLine("");
                     Console.Write(">> ");
-                    string entry1 = Console.ReadLine();
+                    input.entry = Console.ReadLine();
 
+                    input.SaveTo();
+
+                    // input.LoadEntry();
                 }
 
                 else if (menu_choice == "2") //Display
                 {
                     // Console.WriteLine($"{entry1}");
-                    
+                    Entry input = new Entry();
+                    input.LoadEntry();
                 }
 
-                else if (menu_choice == "3") //Load
-                {
-                    //open filename and iterate all prompts in the file
 
-
-                }
-
-                else if (menu_choice == "4") //Save
+                else if (menu_choice == "3") //Save
                 {
                     //make filename then put entry or all entries in it
-
-
+                    Console.Write("Saving...");
+                    Console.Write("...");
+                    Console.Write("...");
+                    Console.Write("Saved!");
                 }
 
-                else if (menu_choice == "5") //Exit
+                else if (menu_choice == "4") //Exit
                 {
                     Console.Write("Have a great day!");
                     closeProgram = "end";
