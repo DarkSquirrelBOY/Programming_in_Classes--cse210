@@ -5,7 +5,9 @@ namespace Develop04
     {
         static void Main(string[] args)
         {
-            
+            Activities spinner = new Activities();
+
+            spinner.LoadSpinner();
         }
     }
 }
